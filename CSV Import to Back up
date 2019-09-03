@@ -1,0 +1,19 @@
+ Title:   Google Apps Script for importing CSV files from Drive into Spread sheet and Backup data
+ Notes:   Be sure to choose right encoder for characteristics
+ Author:  Harim Choi
+
+ 
+ function CSVimporting() {
+ 
+  //Google Dive Folder ID of the CSV file.
+  var RPAFolder = DriveApp.getFolderById("folderID")
+  var file = RPAFolder.getFilesByName("W_RPA_SEARCHING.csv").next();
+  
+  //Select th right character encoder for CSV format ex) UTF-8
+  var csvData = Utilities.parseCsv(file.getBlob().getDataAsString("EUC-KR"));
+  
+  //Google Sheet's ID and Sheet name CSV Data should be imported
+  var sheet = SpreadsheetApp.openById("SheetID").getSheetByName('Sheetname');
+  sheet.getRange(1, 1, csvData.length, csvData[0].length).setValues(csvData);
+  
+}
