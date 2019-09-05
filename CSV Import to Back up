@@ -17,3 +17,22 @@
   sheet.getRange(1, 1, csvData.length, csvData[0].length).setValues(csvData);
   
 }
+
+function FileCopy(RPAFolderId, BACKUPFolderID) {
+  
+  var RPAFolder = DriveApp.getFolderById("1aOwVvH92cbKSS-NZYZVNxlZyhnvZCy-R");
+  var BACKUPFolder = DriveApp.getFolderById("1gMKp-MXOYRedJBL2pleI2M3Lnbk69q5R");
+  
+  var files = RPAFolder.getFiles();
+  var formattedDate = Utilities.formatDate( new Date(), "GMT+9", "yyyy-MM-dd' 'HH:mm");
+  var name = RPAFolder.getName() + " Backup " + formattedDate;
+  
+  while (files.hasNext()) {
+    var file = files.next();
+    var copy = file.makeCopy(name, BACKUPFolder);
+    if (file.getMimeType() == MimeType.GOOGLE_APPS_SCRIPT) {
+      Drive.Files.update({"parents": [{"id": BACKUPFolderID}]}, copy.getId());
+    }
+  }
+}
+
