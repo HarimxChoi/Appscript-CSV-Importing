@@ -2,7 +2,8 @@
  Notes:   Be sure to choose right encoder for characteristics
  Author:  Harim Choi
 
- 
+ functions CSVimport() {
+ var RPA = DraveApp.getFolderById("folderID")
  function CSVimporting() {
  
   //Google Dive Folder ID of the CSV file.
