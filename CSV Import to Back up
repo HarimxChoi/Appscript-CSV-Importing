@@ -1,6 +1,4 @@
  Title:   Google Apps Script for importing CSV files from Drive into Spread sheet and Backup data
- Notes:   Be sure to choose right encoder for characteristics
- Author:  Harim Choi
 
  functions CSVimport() {
  var RPA = DraveApp.getFolderById("folderID")
