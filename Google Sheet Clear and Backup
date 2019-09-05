@@ -1,0 +1,52 @@
+
+function clearRPArequest() {
+  
+var sheet = SpreadsheetApp.openById("1WqVKTeHK0pBd8-qVc97CSjBByaCb8_UzjN3ND61okXM").getSheetByName('POS'); 
+sheet.getRange('$O$2:$O').clearContent();
+var sheet = SpreadsheetApp.openById("1yC2hWZd17dnIUoel3zRc7-NeCRXPG5b30dLdrEY9Qqw").getSheetByName('POS'); 
+sheet.getRange('$O$2:$O').clearContent();
+var sheet = SpreadsheetApp.openById("11CGBJtn5V3NKNuomnLxx_65l3pmpYo3HMxbqaNz-Wpg").getSheetByName('POS'); 
+sheet.getRange('$O$2:$O').clearContent();
+var sheet = SpreadsheetApp.openById("1JAUXdJKeeWt66CNqzUm6KzxvG2PFKAgw98BNJGuczYQ").getSheetByName('POS'); 
+sheet.getRange('$O$2:$O').clearContent();
+var sheet = SpreadsheetApp.openById("1ozNRy3OVsT5AmThfqFno7ivgFHKsAOTCwG3npLPqnAk").getSheetByName('POS'); 
+sheet.getRange('$O$2:$O').clearContent();
+var sheet = SpreadsheetApp.openById("19-sdnalLiIemtAUc5JKwHlyToN8d3-Az20ZbW5XiggM").getSheetByName('POS'); 
+sheet.getRange('$O$2:$O').clearContent();
+var sheet = SpreadsheetApp.openById("1eW4Iw4ka_QiUK2SkPirBr45ChsJEpBNa1x_MIuCc5UE").getSheetByName('POS'); 
+sheet.getRange('$O$2:$O').clearContent();
+var sheet = SpreadsheetApp.openById("1hXq2Ra91qTVT_mYdaKjxpVRh-4qqhe0zg4iqND06JqA").getSheetByName('POS'); 
+sheet.getRange('$O$2:$O').clearContent();
+var sheet = SpreadsheetApp.openById("11-Co22WKEIyhDJgGNvPta-dl3XW-EVSzfb1WMl26QRU").getSheetByName('POS'); 
+sheet.getRange('$O$2:$O').clearContent();
+var sheet = SpreadsheetApp.openById("10ydZVaw3NLMt5zBOSM3Knh8Ac63ZlXBxBLN7LYao1sI").getSheetByName('POS'); 
+sheet.getRange('$O$2:$O').clearContent();
+var sheet = SpreadsheetApp.openById("1rqd9FBu3HM3jRHZUdo3bYhDtE1cWK3L2XTFeJe0_UCY").getSheetByName('POS'); 
+sheet.getRange('$O$2:$O').clearContent();
+var sheet = SpreadsheetApp.openById("1pbspYeNY-lD7Og77Ojph_EwfDTPHnG5nLyXKzz7QZVA").getSheetByName('POS'); 
+sheet.getRange('$O$2:$O').clearContent();
+var sheet = SpreadsheetApp.openById("1tFQwobZHYHywRSbCdeG9EEs1i2ZpPlBR9hLFGPfvtlc").getSheetByName('POS'); 
+sheet.getRange('$O$2:$O').clearContent();
+var sheet = SpreadsheetApp.openById("1XwwUauxYn4s0c4XCMEUZMRr3g_54tzJCfl7n8-ISgYo").getSheetByName('POS'); 
+sheet.getRange('$O$2:$O').clearContent();
+var sheet = SpreadsheetApp.openById("1Hl6u9KdNXPTBz7MwFHFYjL9mRkWe7YCIomufTaBPoB4").getSheetByName('POS'); 
+sheet.getRange('$O$2:$O').clearContent();
+var sheet = SpreadsheetApp.openById("1839PsoU72UG007hyc-10v0PfFaZ7FWsXHvdv-6DkNGA").getSheetByName('POS'); 
+sheet.getRange('$O$2:$O').clearContent();
+  
+}
+
+
+
+function RPARESULTBACKUP() {
+
+var formattedDate = Utilities.formatDate(new Date(), "GMT+9", "yyyy-MM-dd' 'HH:mm");
+var name = SpreadsheetApp.openById("160tYjin9udG7c_kmHngJl2tbNZ3hVY4JzlgpI4ICHRU").getName() + " Backup " + formattedDate;
+var destination = DriveApp.getFolderById("1hcwInMZLakJMJHhp5-cs7C6nUiLnHimj");
+var file = DriveApp.getFileById("160tYjin9udG7c_kmHngJl2tbNZ3hVY4JzlgpI4ICHRU")
+
+file.makeCopy(name, destination);
+}
+
+
+
