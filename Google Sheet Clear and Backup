@@ -1,15 +1,4 @@
-
-function clearRPArequest() {
-
----------Select the Spreadsheet file by ID and sheet by Name and range by Columns and rows then clear those range
-
-var sheet = SpreadsheetApp.openById("Google Spread Sheet File ID").getSheetByName('Sheet name'); 
-sheet.getRange('$O$2:$O').clearContent();
-var sheet = SpreadsheetApp.openById("Google Spread Sheet File ID").getSheetByName('Sheet name'); 
-sheet.getRange('$O$2:$O').clearContent();
-  
-}
-
+Title: Back up the spreadsheet file and clear the Spread sheet
 
 
 function RPARESULTBACKUP() {
@@ -26,6 +15,20 @@ var file = DriveApp.getFileById("File ID")
 
 file.makeCopy(name, destination);
 }
+
+
+
+function clearRPArequest() {
+
+---------Select the Spreadsheet file by ID and sheet by Name and range by Columns and rows then clear those range
+
+var sheet = SpreadsheetApp.openById("Google Spread Sheet File ID").getSheetByName('Sheet name'); 
+sheet.getRange('$O$2:$O').clearContent();
+var sheet = SpreadsheetApp.openById("Google Spread Sheet File ID").getSheetByName('Sheet name'); 
+sheet.getRange('$O$2:$O').clearContent();
+  
+}
+
 
 
 
