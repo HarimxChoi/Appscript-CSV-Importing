@@ -7,10 +7,12 @@
  function CSVimporting() {
  
   //Google Dive Folder ID of the CSV file.
+  
   var RPAFolder = DriveApp.getFolderById("folderID")
   var file = RPAFolder.getFilesByName("W_RPA_SEARCHING.csv").next();
   
-  //Select th right character encoder for CSV format ex) UTF-8
+  //Select the right character encoder for CSV format ex) UTF-8
+  
   var csvData = Utilities.parseCsv(file.getBlob().getDataAsString("EUC-KR"));
   
   //Google Sheet's ID and Sheet name CSV Data should be imported
@@ -21,8 +23,8 @@
 
 function FileCopy(RPAFolderId, BACKUPFolderID) {
   
-  var RPAFolder = DriveApp.getFolderById("1aOwVvH92cbKSS-NZYZVNxlZyhnvZCy-R");
-  var BACKUPFolder = DriveApp.getFolderById("1gMKp-MXOYRedJBL2pleI2M3Lnbk69q5R");
+  var RPAFolder = DriveApp.getFolderById("folderid");
+  var BACKUPFolder = DriveApp.getFolderById("folder id");
   
   var files = RPAFolder.getFiles();
   var formattedDate = Utilities.formatDate( new Date(), "GMT+9", "yyyy-MM-dd' 'HH:mm");
