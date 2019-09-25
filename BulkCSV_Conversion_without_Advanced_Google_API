@@ -4,8 +4,8 @@ function BULK_CSV_IMPORT_to_Spreadsheet() {
 
 #Setting CSV Files location with Folder Id and Spreadsheet Location with Folder Id 
 
-var ToFolder = DriveApp.getFolderById("1x7xiNJOfXR_GNUUcHiVAsHmNgLKvvqXG");
-var Folder = DriveApp.getFolderById("1ue7JkENCK6lY4Ehy7Q5UcUcfCUK3mtqi");
+var ToFolder = DriveApp.getFolderById("FolderID");
+var Folder = DriveApp.getFolderById("FolderID");
 
 var files = Folder.getFiles();
 
