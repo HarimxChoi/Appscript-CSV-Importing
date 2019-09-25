@@ -1,8 +1,8 @@
-#This script is made for Bulk CSV conversion from CSV to Spread sheet from folder to folder without using Google advanced API.
+///This script has written for Bulk CSV conversion from CSV to Spread sheet from folder to folder without using Google advanced API.
 
 function BULK_CSV_IMPORT_to_Spreadsheet() {
 
-#Setting CSV Files location with Folder Id and Spreadsheet Location with Folder Id 
+///Setting CSV Files location with Folder Id and Spreadsheet Location as Folder Id 
 
 var ToFolder = DriveApp.getFolderById("FolderID");
 var Folder = DriveApp.getFolderById("FolderID");
