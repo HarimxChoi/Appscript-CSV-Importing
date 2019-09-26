@@ -1,11 +1,12 @@
-///This script has written for Bulk CSV conversion from CSV to Spread sheet from folder to folder without using Google advanced API.
+///This script has written for Bulk CSV conversion from CSV to Spreadsheet, from folder to folder without using Google advanced API.
+///Github repository; https://github.com/HarimxChoi/Google-Apps-script-Drive-Spreadsheet
 
 function BULK_CSV_IMPORT_to_Spreadsheet() {
 
 ///Setting CSV Files location as Folder with Id and Spreadsheet Location as ToFolder with Id 
 
-var ToFolder = DriveApp.getFolderById("FolderID");
-var Folder = DriveApp.getFolderById("FolderID");
+var ToFolder = DriveApp.getFolderById("1PaHmbp38-Kx9ZRTdSJyNf6thIGyF-efv");
+var Folder = DriveApp.getFolderById("17sNl_j_EBelh8taO--Bf2lKHm2IIVnVI");
 
 var files = Folder.getFiles();
 
@@ -13,9 +14,15 @@ while (files.hasNext()) {
 
   var file = files.next();
   var name = file.getName();
+  
+  ///File name setting without Extension(e.x. fruit.csv -> fruit), to remain extention, replace line 26 ".create(name_sub);" -> ".create(name);"
+  
   var name_sub = name.split('.')[0]
   
+  ///Encoder Setting (ex.EUX-KR,UTF-8)
+  
   var csvData = Utilities.parseCsv(file.getBlob().getDataAsString("EUC-KR"));
+  
   var newSS = SpreadsheetApp.create(name_sub);
   var copyFile=DriveApp.getFileById(newSS.getId());
   var sheet = newSS.getSheets()[0];
